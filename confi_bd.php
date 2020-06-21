@@ -6,7 +6,7 @@
 
   $ conn = new mysqli ( $ db_host , $ db_user , $ db_pass , $ db_name );
   if ( $ conn -> connect_error ) {
-    echo  "Fallo" ;
+    echo  "Fallo";
     morir ( "Error de conexión:" . $ conn -> connect_error );
   }
 ?>
