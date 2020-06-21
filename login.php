@@ -1,7 +1,7 @@
 <?php
   include 'confi_bd.php';
   
-  $correo = filter_input(INPUT_POST, "nombre");
+  $nombre = filter_input(INPUT_POST, "nombre");
   $contra = filter_input(INPUT_POST, "contraseña");
   $contra = md5($contra);
   
