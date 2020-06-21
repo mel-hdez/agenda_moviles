@@ -3,7 +3,7 @@
   
   $nombre = filter_input(INPUT_POST, "nombre");
   $contra = filter_input(INPUT_POST, "contraseña");
-  $contra = md5($contra);
+  
   
   $query = "SELECT * FROM usuario WHERE nombre = '".$nombre."' AND contrasena = '".$contra."'";
   $resultado = $conn->query($query);    
