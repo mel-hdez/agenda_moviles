@@ -2,7 +2,7 @@
   header('Content-Type: application/json');
   include 'confi_bd.php';
 
-  $id = filter_input (INPUT_POST,"id");
+  $menu = $_REQUEST['opcion'];
   $resultadoArray = array();
     
     $notasQuery = "SELECT * FROM notas WHERE id_usuario = '$id'";
