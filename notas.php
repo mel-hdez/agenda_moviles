@@ -1,5 +1,6 @@
 <?php
-include 'confi_bd.php';
+  header('Content-Type: application/json');
+  include 'confi_bd.php';
 
   $id = filter_input (INPUT_POST,"id");
   $resultadoArray = array();
