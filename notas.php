@@ -1,12 +1,13 @@
 <?php
 include 'confi_bd.php';
 
-$id = filter_input (INPUT_POST,"id");
+  $id = filter_input (INPUT_POST,"id");
+  $resultadoArray = array();
     
-     $usuarioQuery = "SELECT * FROM notas WHERE id_notas (nom_notas, desc_notas, fecha, id_usuario)
-                          VALUES('$notatitulo','$texnota', '$fecha', '$id')";
-        $userResult = mysqli_query($conn, $usuarioQuery);
-        if($userResult){
-          echo "1";
-        }
+    $notasQuery = "SELECT * FROM notas WHERE id_usuario = '$id'";
+    $notasResult = mysqli_query($conn, $notasQuery);
+    foreach($notasResult as $row){
+      $resultadoArray[] = $row;
+    }
+    echo json_encode($resultadoArray);
 ?>
