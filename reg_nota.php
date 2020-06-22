@@ -2,14 +2,16 @@
 
 include 'confi_bd.php';
 
-    $titulonota = filter_input (INPUT_POST,"titulo");
-    $textonota = filter_input (INPUT_POST,"notatex");
-    
+    $notatitulo = filter_input (INPUT_POST,"titulo");
+    $texnota = filter_input (INPUT_POST,"texto");
+    $fecha = filter_input (INPUT_POST,"fecha");
         
-         $usuarioQuery = "INSERT INTO notas (titulo, notatext)
-                              VALUES('$titulonota','$textnota')";
+         $usuarioQuery = "INSERT INTO nota (titulo, texto, fecha)
+                              VALUES('$notatitulo','$texnota', '$fecha')";
             $userResult = mysqli_query($conn, $usuarioQuery);
             if($userResult){
               echo "1";
             }
 ?>
+
+
