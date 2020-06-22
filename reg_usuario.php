@@ -2,7 +2,7 @@
 
 include 'confi_bd.php';
 
-    $nom = filter_input (INPUT_POST,"nombre");
+      $nom = filter_input (INPUT_POST,"nombre");
     $email = filter_input (INPUT_POST,"email");
     $contras = filter_inputT (INPUT_POST,"contrasena");
 
