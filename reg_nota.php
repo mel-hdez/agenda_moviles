@@ -3,7 +3,7 @@
 include 'confi_bd.php';
 
     $id = filter_input (INPUT_POST,"id");
-    $notatitulo = filter_input (INPUT_POST,"nom_notas");
+    $notatitulo = filter_input (INPUT_POST,"titulo");
     $texnota = filter_input (INPUT_POST,"desc_notas");
     $fecha = filter_input (INPUT_POST,"fecha");
         
