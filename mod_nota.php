@@ -8,6 +8,9 @@
   $usuarioQuery = "UPDATE notas SET nom_notas = '$notatitulo', desc_notas = '$texnota' WHERE id_notas = '$id'";
   $userResult = mysqli_query($conn, $usuarioQuery);
   if($userResult){
-    echo "1";
+    $userQuery = "SELECT id_usuario FROM notas WHERE id_notas = '$id'";
+    $resultado = $conn->query($userQuery);    
+    $array = $resultado->fetch_array(MYSQLI_NUM);
+    echo '1-'.$array[0];
   }
 ?>
