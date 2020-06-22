@@ -4,7 +4,6 @@
   $nombre = filter_input(INPUT_POST, "nombre");
   $contra = filter_input(INPUT_POST, "contraseña");
   
-  
   $query = "SELECT * FROM usuario WHERE nombre = '".$nombre."' AND contrasena = '".$contra."'";
   $resultado = $conn->query($query);    
   $array = $resultado->fetch_array(MYSQLI_NUM);
