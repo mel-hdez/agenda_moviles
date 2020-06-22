@@ -4,7 +4,7 @@ include 'confi_bd.php';
 
     $nom = filter_input (INPUT_POST,"nombre");
     $email = filter_input (INPUT_POST,"email");
-    $contras = filter_inputT (INPUT_POST,"contrasena");
+    $contras = filter_input (INPUT_POST,"contrasena");
         
          $usuarioQuery = "INSERT INTO usuario(nombre, email, contrasena)
                               VALUES('$nom','$email', '$contras')";
@@ -12,7 +12,6 @@ include 'confi_bd.php';
             if($userResult){
               echo "1";
             }
-            echo "1";
 ?>
 
 
